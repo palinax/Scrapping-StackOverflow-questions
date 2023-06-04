@@ -1,0 +1,18 @@
+Cache-Control: private
+Content-Type: text/plain; charset=utf-8
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=15552000
+X-Frame-Options: SAMEORIGIN
+X-Request-Guid: b4ce0dbb-14c7-4719-b8ec-c502c77dab49
+Feature-Policy: microphone 'none'; speaker 'none'
+Content-Security-Policy: upgrade-insecure-requests; frame-ancestors 'self' https://stackexchange.com
+Accept-Ranges: bytes
+Date: Sun, 04 Jun 2023 01:16:04 GMT
+Via: 1.1 varnish
+X-Served-By: cache-fra-eddf8230138-FRA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1685841364.069631,VS0,VE93
+Vary: Accept-Encoding,Fastly-SSL
+X-Dns-Prefetch-Control: off
+Set-Cookie: prov=16099233-26ec-1950-8b78-1b55ba8e7fc9; domain=.stackoverflow.com; expires=Fri, 01-Jan-2055 00:00:00 GMT; path=/; HttpOnly

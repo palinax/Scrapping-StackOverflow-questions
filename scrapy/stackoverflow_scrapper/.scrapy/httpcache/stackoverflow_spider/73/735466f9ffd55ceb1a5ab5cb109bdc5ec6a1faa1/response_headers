@@ -1,0 +1,21 @@
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=15552000
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: OptanonConsent=; expires=Fri, 02 Jun 2023 01:16:42 GMT; domain=.stackoverflow.com; path=/; secure; samesite=none; httponly
+Set-Cookie: OptanonAlertBoxClosed=; expires=Fri, 02 Jun 2023 01:16:42 GMT; domain=.stackoverflow.com; path=/; secure; samesite=none; httponly
+Set-Cookie: usr=p=%5b160%7c%3bMostVotes%3b%5d%5b10%7c15%5d; expires=Mon, 04 Dec 2023 01:16:42 GMT; path=/; secure; samesite=none; httponly
+Set-Cookie: prov=a3292df3-66c5-cb2f-8229-ca1a9f8b8b1b; domain=.stackoverflow.com; expires=Fri, 01-Jan-2055 00:00:00 GMT; path=/; HttpOnly
+X-Request-Guid: 9d1a3dff-433d-4347-93e5-0c9ef2dbaf42
+Feature-Policy: microphone 'none'; speaker 'none'
+Content-Security-Policy: upgrade-insecure-requests; frame-ancestors 'self' https://stackexchange.com
+Accept-Ranges: bytes
+Date: Sun, 04 Jun 2023 01:16:42 GMT
+Via: 1.1 varnish
+X-Served-By: cache-fra-eddf8230138-FRA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1685841402.306034,VS0,VE103
+Vary: Accept-Encoding,Fastly-SSL
+X-Dns-Prefetch-Control: off
