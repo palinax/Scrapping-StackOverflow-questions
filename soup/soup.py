@@ -1,4 +1,4 @@
-########## libraries
+########## Libraries
 import requests
 from bs4 import BeautifulSoup
 import math
@@ -6,13 +6,13 @@ import time
 import pandas as pd
 import csv
 
-######### functions
+########## Functions
 def time_minutes(time):
 	mm = math.floor(time / 60)
 	ss = time - 60 * mm
 	return f"{mm} minutes {ss:.2f} seconds"
 
-######### settings
+########## Settings
 # Boolean parameter to limit the number of pages
 limit_pages = True
 
@@ -33,7 +33,7 @@ page_limit = 150
 if limit_pages == True:
 	page_limit = 100
 
-########## scraping
+########## Scraping
 # Start timestamp
 start_time = time.time()
   
