@@ -9,11 +9,11 @@ from selenium.webdriver.support import expected_conditions as EC
 import csv
 from selenium.common.exceptions import NoSuchElementException
 
-# Define the path to the ChromeDriver executable
+# Define the path to the ChromeDriver executable and set Service object to start ChromeDriver 
 chrome_path = '/path/to/chromedriver'
 ser = Service(chrome_path)
 
-# Define options for the Chrome driver
+# Define options for the Chrome driver for better performance 
 options = webdriver.ChromeOptions()
 
 # Enable headless mode for faster scraping
@@ -29,14 +29,18 @@ prefs = {
 }
 options.add_experimental_option("prefs", prefs)
 
-def scrape_website(url, limit_100_pages=True):
-    # Number of pages you want to scrape
+# Initiates scrapping process
+
+def scrape_website(url, limit_100_pages=False):
+    start_time = time.time()  # Start time of scraping
+
+    # Number of pages we want to scrape
     if limit_100_pages:
         num_pages = 100
     else:
-        num_pages = 999999  # A large number to scrape all available pages
+        num_pages = 10  # Number of pages for screencase
 
-    # Number of CPU cores on your machine
+    # Number of CPU cores on the machine 
     num_cores = cpu_count()
 
     # Create a list of page numbers/URLs
@@ -71,12 +75,13 @@ def scrape_website(url, limit_100_pages=True):
     except Exception as e:
         print("Error occurred while writing to CSV file:", str(e))
 
-    print("Script finished")
+    elapsed_time = time.time() - start_time
+    print("Scraping finished in", round(elapsed_time, 2), "seconds")
 
 
 def scrape(page_number):
     # Define the URL to be scraped
-    url = f"https://stackoverflow.com/questions/tagged/web-scraping?tab=votes&pagesize=15&page={page_number}"
+    url = f"https://stackoverflow.com/questions/tagged/web-scraping?tab=votes&pagesize=25&page={page_number}"
 
     # Instantiate the Chrome driver with the defined service and options
     driver = webdriver.Chrome(service=ser, options=options)
@@ -106,7 +111,7 @@ def scrape(page_number):
         # Print progress after each 15th question
         if question_counter % 15 == 0:
             page_index = page_number - 1  # Adjust page index for zero-based indexing
-            print(f"Page {page_index} scrapped")
+            print(f"Page {page_index} scraped")
 
         # Extract link to the question
         q_link = q_title_element.get_attribute('href')
@@ -145,10 +150,10 @@ def scrape(page_number):
 
 if __name__ == "__main__":
     # Define the URL of the website to be scraped
-    url = "https://stackoverflow.com/questions/tagged/web-scraping?tab=votes"
+    url = "https://stackoverflow.com/questions/tagged/web-scraping?tab=votes?tab=votes&pagesize=25"
 
     # Set the boolean parameter to limit scraped pages to 100
-    limit_100_pages = True
+    limit_100_pages = False
 
     # Call the scrape_website function with the URL and boolean parameter
     scrape_website(url, limit_100_pages)
