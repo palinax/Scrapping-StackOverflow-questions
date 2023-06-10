@@ -31,7 +31,7 @@ options.add_experimental_option("prefs", prefs)
 
 # Initiates scrapping process
 
-def scrape_website(url, limit_100_pages=False):
+def scrape_website(url, limit_100_pages=True):
     start_time = time.time()  # Start time of scraping
 
     # Number of pages we want to scrape
@@ -153,7 +153,7 @@ if __name__ == "__main__":
     url = "https://stackoverflow.com/questions/tagged/web-scraping?tab=votes?tab=votes&pagesize=25"
 
     # Set the boolean parameter to limit scraped pages to 100
-    limit_100_pages = False
+    limit_100_pages = True
 
     # Call the scrape_website function with the URL and boolean parameter
     scrape_website(url, limit_100_pages)
