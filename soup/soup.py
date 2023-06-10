@@ -26,7 +26,7 @@ questions_info = []
 
 # Questions per page (will be used in creating an url parameter)
 # we tested several values, it does not impact the performance
-question_limit = 25
+question_limit = 15
 
 # Obligatory parameter
 page_limit = 150
